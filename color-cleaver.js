@@ -22,11 +22,14 @@ if(color1 === undefined){
 if(color1 !== undefined && color2 === undefined){
     if(isValidSecondary(color1) === true){
     console.log(colorDeconstructor(color1))
+    return true
     }
     if(isValidPrimary(color1) === true){
         console.log(color1 + " is a Primary Color. Please enter a second Primary color for mr to tell you what those colors will be when combined!")
+        return true
     } else {
         console.log(color1 + " is not a color. Please enter a color.")
+        return true
     }
 }
 
