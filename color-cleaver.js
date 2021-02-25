@@ -5,3 +5,31 @@ const isValidSecondary = require("./is-valid-secondary.js");
 const getInput = require("./get-input.js");
 
 // Your code here!
+const color1 = getInput(1);
+const color2 = getInput(2);
+// console.log(color1);
+// console.log(color2);
+// console.log(isValidPrimary(color1));
+// console.log(isValidPrimary(color2));
+// console.log(isValidSecondary(color1));
+// console.log(isValidSecondary(color2));
+
+
+if(color1 === undefined){
+    console.log("Please enter at least one color!")
+}
+
+if(color1 !== undefined && color2 === undefined){
+    if(isValidSecondary(color1) === true){
+    console.log(colorDeconstructor(color1))
+    }
+    if(isValidPrimary(color1) === true){
+        console.log(color1 + " is a Primary Color. Please enter a second Primary color for mr to tell you what those colors will be when combined!")
+    } else {
+        console.log(color1 + " is not a color. Please enter a color.")
+    }
+}
+
+if (color1 !== undefined && color2 !== undefined){
+    console.log(colorCombinator(color1, color2))
+    }
