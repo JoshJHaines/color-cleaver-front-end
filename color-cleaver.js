@@ -34,5 +34,12 @@ if(color1 !== undefined && color2 === undefined){
 }
 
 if (color1 !== undefined && color2 !== undefined){
-    console.log(colorCombinator(color1, color2))
+    if(isValidPrimary(color1) === true && isValidPrimary(color2) === true){
+        console.log(colorCombinator(color1, color2))
     }
+    if(isValidPrimary(color1) === false || isValidPrimary(color2) === false){
+        console.log("One or more of your colors are not Primary colors. Please enter 2 Primary colors OR 1 Secondary colors!")
+    }else{
+        console.log("What is wrong with you?!?!?!")
+    }
+}
