@@ -39,7 +39,5 @@ if (color1 !== undefined && color2 !== undefined){
     }
     if(isValidPrimary(color1) === false || isValidPrimary(color2) === false){
         console.log("One or more of your colors are not Primary colors. Please enter 2 Primary colors OR 1 Secondary colors!")
-    }else{
-        console.log("What is wrong with you?!?!?!")
     }
 }
